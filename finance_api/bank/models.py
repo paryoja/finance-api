@@ -22,6 +22,8 @@ class Account(models.Model):
     type = models.CharField(
         max_length=30, choices=AccountType.choices, default=AccountType.SAVINGS_ACCOUNT
     )
+    amount = models.IntegerField(default=0)
+    last_updated = models.DateTimeField()
 
     def __str__(self):
         return self.bank.name + ":" + self.name

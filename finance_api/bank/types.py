@@ -15,3 +15,5 @@ class Account:
     id: auto
     name: auto
     bank: Bank
+    amount: auto
+    last_updated: auto
