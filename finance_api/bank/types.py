@@ -17,3 +17,28 @@ class Account:
     bank: Bank
     amount: auto
     last_updated: auto
+
+
+@strawberry.django.type(models.Transaction)
+class Transaction:
+    id: auto
+    account_from: Account
+    account_to: Account
+    amount: auto
+    datetime: auto
+
+
+@strawberry.django.type(models.Withdraw)
+class Withdraw:
+    id: auto
+    account: Account
+    amount: auto
+    datetime: auto
+
+
+@strawberry.django.type(models.Deposit)
+class Deposit:
+    id: auto
+    account: Account
+    amount: auto
+    datetime: auto
