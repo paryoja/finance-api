@@ -20,6 +20,7 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
     path("users/", include("finance_api.users.urls", namespace="users")),
+    path("bank/", include("finance_api.bank.urls", namespace="bank")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

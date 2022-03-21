@@ -43,22 +43,22 @@ services:
     ports:
       - "0.0.0.0:80:80"
       - "0.0.0.0:443:443"
-      - "0.0.0.0:5555:5555"
+      # - "0.0.0.0:5555:5555"
 
-  redis:
-    image: redis:6
+  # redis:
+  #   image: redis:6
 
-  celeryworker:
-    <<: *django
-    image: finance_api_production_celeryworker
-    command: /start-celeryworker
+  # celeryworker:
+  #   <<: *django
+  #   image: finance_api_production_celeryworker
+  #   command: /start-celeryworker
 
-  celerybeat:
-    <<: *django
-    image: finance_api_production_celerybeat
-    command: /start-celerybeat
+  # celerybeat:
+  #   <<: *django
+  #   image: finance_api_production_celerybeat
+  #   command: /start-celerybeat
 
-  flower:
-    <<: *django
-    image: finance_api_production_flower
-    command: /start-flower
+  # flower:
+  #   <<: *django
+  #   image: finance_api_production_flower
+  #   command: /start-flower
