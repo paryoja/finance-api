@@ -11,11 +11,7 @@ from django.urls import reverse
 from finance_api.users.forms import UserAdminChangeForm
 from finance_api.users.models import User
 from finance_api.users.tests.factories import UserFactory
-from finance_api.users.views import (
-    UserRedirectView,
-    UserUpdateView,
-    user_detail_view,
-)
+from finance_api.users.views import UserRedirectView, UserUpdateView, user_detail_view
 
 pytestmark = pytest.mark.django_db
 

@@ -1,5 +1,7 @@
 from django.shortcuts import HttpResponse
+
 from finance_api.utils import bank_utils
+
 
 # Create your views here.
 def information(request):
