@@ -42,20 +42,20 @@ class Transaction(models.Model):
     account_to = models.ForeignKey(
         Account, related_name="account_to", on_delete=models.CASCADE
     )
-    amount = models.PositiveIntegerField()
+    amount = models.FloatField()
     datetime = models.DateTimeField()
     note = models.TextField(null=True, blank=True)
 
 
 class Withdraw(models.Model):
     account = models.ForeignKey(Account, on_delete=models.CASCADE)
-    amount = models.PositiveIntegerField()
+    amount = models.FloatField()
     datetime = models.DateTimeField()
     note = models.TextField()
 
 
 class Deposit(models.Model):
     account = models.ForeignKey(Account, on_delete=models.CASCADE)
-    amount = models.PositiveIntegerField()
+    amount = models.FloatField()
     datetime = models.DateTimeField()
     note = models.TextField()
